@@ -1,21 +1,49 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Redirecting to the App Store...</title>
-    <script>
-      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting to Open Readings...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-      if (/android/i.test(userAgent)) {
-        window.location.href = "https://play.google.com/store/apps/details?id=YOUR_ANDROID_PACKAGE";
-      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        window.location.href = "https://apps.apple.com/app/idYOUR_APP_ID";
-      } else {
-        window.location.href = "https://yourwebsite.com/download";
-      }
-    </script>
-  </head>
-  <body>
-    <p>Redirecting to your app store...</p>
-  </body>
+    if (/android/i.test(userAgent)) {
+      window.location.href = "https://play.google.com/store/apps/details?id=com.vu.or_app2024&referrer=utm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_term%3Dopen+readings+google+play&pcampaignid=APPU_1_WBsfaNrZLOWXjgb-59f4CQ";
+    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      window.location.href = "https://apps.apple.com/lt/app/open-readings/id6743805540";
+    } else {
+      // Optional: Desktop users
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("desktop").style.display = "block";
+      });
+    }
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+    #desktop {
+      display: none;
+    }
+    a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background-color: #0070f3;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Redirecting to Open Readings App...</h2>
+  <div id="desktop">
+    <p>If you're not redirected, click below:</p>
+    <a href="https://apps.apple.com/lt/app/open-readings/id6743805540">Open in App Store</a>
+    <a href="https://play.google.com/store/apps/details?id=com.vu.or_app2024&referrer=utm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_term%3Dopen+readings+google+play&pcampaignid=APPU_1_WBsfaNrZLOWXjgb-59f4CQ">Open in Google Play</a>
+  </div>
+</body>
 </html>
